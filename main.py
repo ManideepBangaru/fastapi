@@ -3,7 +3,7 @@ import uvicorn
 
 app = FastAPI()
 
-@app.get("/")
+@app.get("/fastapi_app")
 async def say_hello():
     return "Hello World !!!"
 

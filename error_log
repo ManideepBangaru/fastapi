@@ -1,0 +1,1232 @@
+[2022-11-21 12:14:25 +0000] [47048] [DEBUG] Current configuration:
+  config: gunicorn_conf.py
+  wsgi_app: None
+  bind: ['unix:/home/manideep/documents/fastapi/fastapi_app.sock']
+  backlog: 2048
+  workers: 3
+  worker_class: uvicorn.workers.UvicornWorker
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/manideep/documents/fastapi
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /home/manideep/documents/fastapi/access_log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/manideep/documents/fastapi/error_log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: main:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fcf4f04d550>
+  on_reload: <function OnReload.on_reload at 0x7fcf4f04d670>
+  when_ready: <function WhenReady.when_ready at 0x7fcf4f04d790>
+  pre_fork: <function Prefork.pre_fork at 0x7fcf4f04d8b0>
+  post_fork: <function Postfork.post_fork at 0x7fcf4f04d9d0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fcf4f04daf0>
+  worker_int: <function WorkerInt.worker_int at 0x7fcf4f04dc10>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fcf4f04dd30>
+  pre_exec: <function PreExec.pre_exec at 0x7fcf4f04de50>
+  pre_request: <function PreRequest.pre_request at 0x7fcf4f04df70>
+  post_request: <function PostRequest.post_request at 0x7fcf4f062040>
+  child_exit: <function ChildExit.child_exit at 0x7fcf4f062160>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fcf4f062280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fcf4f0623a0>
+  on_exit: <function OnExit.on_exit at 0x7fcf4f0624c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-11-21 12:14:25 +0000] [47048] [INFO] Starting gunicorn 20.1.0
+[2022-11-21 12:14:25 +0000] [47048] [DEBUG] Arbiter booted
+[2022-11-21 12:14:25 +0000] [47048] [INFO] Listening at: unix:/home/manideep/documents/fastapi/fastapi_app.sock (47048)
+[2022-11-21 12:14:25 +0000] [47048] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2022-11-21 12:14:25 +0000] [47064] [INFO] Booting worker with pid: 47064
+[2022-11-21 12:14:25 +0000] [47065] [INFO] Booting worker with pid: 47065
+[2022-11-21 12:14:25 +0000] [47066] [INFO] Booting worker with pid: 47066
+[2022-11-21 12:14:25 +0000] [47048] [DEBUG] 3 workers
+[2022-11-21 12:14:25 +0000] [47064] [INFO] Started server process [47064]
+[2022-11-21 12:14:25 +0000] [47064] [INFO] Waiting for application startup.
+[2022-11-21 12:14:25 +0000] [47064] [INFO] Application startup complete.
+[2022-11-21 12:14:25 +0000] [47065] [INFO] Started server process [47065]
+[2022-11-21 12:14:25 +0000] [47065] [INFO] Waiting for application startup.
+[2022-11-21 12:14:25 +0000] [47065] [INFO] Application startup complete.
+[2022-11-21 12:14:25 +0000] [47066] [INFO] Started server process [47066]
+[2022-11-21 12:14:25 +0000] [47066] [INFO] Waiting for application startup.
+[2022-11-21 12:14:25 +0000] [47066] [INFO] Application startup complete.
+[2022-11-21 13:31:43 +0000] [47048] [INFO] Handling signal: term
+[2022-11-21 13:31:43 +0000] [47065] [INFO] Shutting down
+[2022-11-21 13:31:43 +0000] [47064] [INFO] Shutting down
+[2022-11-21 13:31:43 +0000] [47065] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2022-11-21 13:31:43 +0000] [47064] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2022-11-21 13:31:43 +0000] [47066] [INFO] Shutting down
+[2022-11-21 13:31:43 +0000] [47066] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2022-11-21 13:31:43 +0000] [47065] [INFO] Waiting for application shutdown.
+[2022-11-21 13:31:43 +0000] [47064] [INFO] Waiting for application shutdown.
+[2022-11-21 13:31:43 +0000] [47065] [INFO] Application shutdown complete.
+[2022-11-21 13:31:43 +0000] [47065] [INFO] Finished server process [47065]
+[2022-11-21 13:31:43 +0000] [47064] [INFO] Application shutdown complete.
+[2022-11-21 13:31:43 +0000] [47064] [INFO] Finished server process [47064]
+[2022-11-21 13:31:43 +0000] [47065] [INFO] Worker exiting (pid: 47065)
+[2022-11-21 13:31:43 +0000] [47064] [INFO] Worker exiting (pid: 47064)
+[2022-11-21 13:31:43 +0000] [47066] [INFO] Waiting for application shutdown.
+[2022-11-21 13:31:43 +0000] [47066] [INFO] Application shutdown complete.
+[2022-11-21 13:31:43 +0000] [47066] [INFO] Finished server process [47066]
+[2022-11-21 13:31:43 +0000] [47066] [INFO] Worker exiting (pid: 47066)
+[2022-11-21 13:31:43 +0000] [47048] [INFO] Shutting down: Master
+[2022-11-21 13:32:48 +0000] [60537] [DEBUG] Current configuration:
+  config: gunicorn_conf.py
+  wsgi_app: None
+  bind: ['unix:/home/manideep/documents/fastapi/fastapi_app.sock']
+  backlog: 2048
+  workers: 3
+  worker_class: uvicorn.workers.UvicornWorker
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/manideep/documents/fastapi
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /home/manideep/documents/fastapi/access_log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/manideep/documents/fastapi/error_log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: main:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f7d80f6a550>
+  on_reload: <function OnReload.on_reload at 0x7f7d80f6a670>
+  when_ready: <function WhenReady.when_ready at 0x7f7d80f6a790>
+  pre_fork: <function Prefork.pre_fork at 0x7f7d80f6a8b0>
+  post_fork: <function Postfork.post_fork at 0x7f7d80f6a9d0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f7d80f6aaf0>
+  worker_int: <function WorkerInt.worker_int at 0x7f7d80f6ac10>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f7d80f6ad30>
+  pre_exec: <function PreExec.pre_exec at 0x7f7d80f6ae50>
+  pre_request: <function PreRequest.pre_request at 0x7f7d80f6af70>
+  post_request: <function PostRequest.post_request at 0x7f7d80f7f040>
+  child_exit: <function ChildExit.child_exit at 0x7f7d80f7f160>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f7d80f7f280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f7d80f7f3a0>
+  on_exit: <function OnExit.on_exit at 0x7f7d80f7f4c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-11-21 13:32:48 +0000] [60537] [INFO] Starting gunicorn 20.1.0
+[2022-11-21 13:32:48 +0000] [60537] [DEBUG] Arbiter booted
+[2022-11-21 13:32:48 +0000] [60537] [INFO] Listening at: unix:/home/manideep/documents/fastapi/fastapi_app.sock (60537)
+[2022-11-21 13:32:48 +0000] [60537] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2022-11-21 13:32:48 +0000] [60553] [INFO] Booting worker with pid: 60553
+[2022-11-21 13:32:49 +0000] [60554] [INFO] Booting worker with pid: 60554
+[2022-11-21 13:32:49 +0000] [60553] [INFO] Started server process [60553]
+[2022-11-21 13:32:49 +0000] [60553] [INFO] Waiting for application startup.
+[2022-11-21 13:32:49 +0000] [60537] [DEBUG] 3 workers
+[2022-11-21 13:32:49 +0000] [60553] [INFO] Application startup complete.
+[2022-11-21 13:32:49 +0000] [60561] [INFO] Booting worker with pid: 60561
+[2022-11-21 13:32:49 +0000] [60554] [INFO] Started server process [60554]
+[2022-11-21 13:32:49 +0000] [60554] [INFO] Waiting for application startup.
+[2022-11-21 13:32:49 +0000] [60554] [INFO] Application startup complete.
+[2022-11-21 13:32:49 +0000] [60561] [INFO] Started server process [60561]
+[2022-11-21 13:32:49 +0000] [60561] [INFO] Waiting for application startup.
+[2022-11-21 13:32:49 +0000] [60561] [INFO] Application startup complete.
+[2022-11-21 13:36:59 +0000] [60537] [INFO] Handling signal: term
+[2022-11-21 13:36:59 +0000] [60561] [INFO] Shutting down
+[2022-11-21 13:36:59 +0000] [60561] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2022-11-21 13:36:59 +0000] [60554] [INFO] Shutting down
+[2022-11-21 13:36:59 +0000] [60554] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2022-11-21 13:36:59 +0000] [60553] [INFO] Shutting down
+[2022-11-21 13:36:59 +0000] [60553] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2022-11-21 13:37:00 +0000] [60561] [INFO] Waiting for application shutdown.
+[2022-11-21 13:37:00 +0000] [60561] [INFO] Application shutdown complete.
+[2022-11-21 13:37:00 +0000] [60561] [INFO] Finished server process [60561]
+[2022-11-21 13:37:00 +0000] [60561] [INFO] Worker exiting (pid: 60561)
+[2022-11-21 13:37:00 +0000] [60553] [INFO] Waiting for application shutdown.
+[2022-11-21 13:37:00 +0000] [60553] [INFO] Application shutdown complete.
+[2022-11-21 13:37:00 +0000] [60553] [INFO] Finished server process [60553]
+[2022-11-21 13:37:00 +0000] [60554] [INFO] Waiting for application shutdown.
+[2022-11-21 13:37:00 +0000] [60554] [INFO] Application shutdown complete.
+[2022-11-21 13:37:00 +0000] [60554] [INFO] Finished server process [60554]
+[2022-11-21 13:37:00 +0000] [60553] [INFO] Worker exiting (pid: 60553)
+[2022-11-21 13:37:00 +0000] [60554] [INFO] Worker exiting (pid: 60554)
+[2022-11-21 13:37:00 +0000] [60537] [INFO] Shutting down: Master
+[2022-11-21 13:40:57 +0000] [64138] [DEBUG] Current configuration:
+  config: gunicorn_conf.py
+  wsgi_app: None
+  bind: ['unix:/home/manideep/documents/fastapi/fastapi_app.sock']
+  backlog: 2048
+  workers: 3
+  worker_class: uvicorn.workers.UvicornWorker
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/manideep/documents/fastapi
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /home/manideep/documents/fastapi/access_log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/manideep/documents/fastapi/error_log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: main:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f3f3c7cf550>
+  on_reload: <function OnReload.on_reload at 0x7f3f3c7cf670>
+  when_ready: <function WhenReady.when_ready at 0x7f3f3c7cf790>
+  pre_fork: <function Prefork.pre_fork at 0x7f3f3c7cf8b0>
+  post_fork: <function Postfork.post_fork at 0x7f3f3c7cf9d0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f3f3c7cfaf0>
+  worker_int: <function WorkerInt.worker_int at 0x7f3f3c7cfc10>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f3f3c7cfd30>
+  pre_exec: <function PreExec.pre_exec at 0x7f3f3c7cfe50>
+  pre_request: <function PreRequest.pre_request at 0x7f3f3c7cff70>
+  post_request: <function PostRequest.post_request at 0x7f3f3c7e4040>
+  child_exit: <function ChildExit.child_exit at 0x7f3f3c7e4160>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f3f3c7e4280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f3f3c7e43a0>
+  on_exit: <function OnExit.on_exit at 0x7f3f3c7e44c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-11-21 13:40:57 +0000] [64138] [INFO] Starting gunicorn 20.1.0
+[2022-11-21 13:40:57 +0000] [64138] [DEBUG] Arbiter booted
+[2022-11-21 13:40:57 +0000] [64138] [INFO] Listening at: unix:/home/manideep/documents/fastapi/fastapi_app.sock (64138)
+[2022-11-21 13:40:57 +0000] [64138] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2022-11-21 13:40:57 +0000] [64168] [INFO] Booting worker with pid: 64168
+[2022-11-21 13:40:57 +0000] [64169] [INFO] Booting worker with pid: 64169
+[2022-11-21 13:40:57 +0000] [64171] [INFO] Booting worker with pid: 64171
+[2022-11-21 13:40:57 +0000] [64138] [DEBUG] 3 workers
+[2022-11-21 13:40:57 +0000] [64168] [INFO] Started server process [64168]
+[2022-11-21 13:40:57 +0000] [64168] [INFO] Waiting for application startup.
+[2022-11-21 13:40:57 +0000] [64168] [INFO] Application startup complete.
+[2022-11-21 13:40:57 +0000] [64171] [INFO] Started server process [64171]
+[2022-11-21 13:40:57 +0000] [64171] [INFO] Waiting for application startup.
+[2022-11-21 13:40:57 +0000] [64171] [INFO] Application startup complete.
+[2022-11-21 13:40:58 +0000] [64169] [INFO] Started server process [64169]
+[2022-11-21 13:40:58 +0000] [64169] [INFO] Waiting for application startup.
+[2022-11-21 13:40:58 +0000] [64169] [INFO] Application startup complete.
+[2022-11-21 13:43:39 +0000] [64138] [INFO] Handling signal: term
+[2022-11-21 13:43:39 +0000] [64168] [INFO] Shutting down
+[2022-11-21 13:43:39 +0000] [64168] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2022-11-21 13:43:39 +0000] [64169] [INFO] Shutting down
+[2022-11-21 13:43:39 +0000] [64169] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2022-11-21 13:43:39 +0000] [64171] [INFO] Shutting down
+[2022-11-21 13:43:39 +0000] [64171] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2022-11-21 13:43:39 +0000] [64168] [INFO] Waiting for application shutdown.
+[2022-11-21 13:43:39 +0000] [64168] [INFO] Application shutdown complete.
+[2022-11-21 13:43:39 +0000] [64169] [INFO] Waiting for application shutdown.
+[2022-11-21 13:43:39 +0000] [64168] [INFO] Finished server process [64168]
+[2022-11-21 13:43:39 +0000] [64169] [INFO] Application shutdown complete.
+[2022-11-21 13:43:39 +0000] [64169] [INFO] Finished server process [64169]
+[2022-11-21 13:43:39 +0000] [64168] [INFO] Worker exiting (pid: 64168)
+[2022-11-21 13:43:39 +0000] [64169] [INFO] Worker exiting (pid: 64169)
+[2022-11-21 13:43:39 +0000] [64171] [INFO] Waiting for application shutdown.
+[2022-11-21 13:43:39 +0000] [64171] [INFO] Application shutdown complete.
+[2022-11-21 13:43:39 +0000] [64171] [INFO] Finished server process [64171]
+[2022-11-21 13:43:39 +0000] [64171] [INFO] Worker exiting (pid: 64171)
+[2022-11-21 13:43:39 +0000] [64138] [INFO] Shutting down: Master
+[2022-11-21 13:44:16 +0000] [65619] [DEBUG] Current configuration:
+  config: gunicorn_conf.py
+  wsgi_app: None
+  bind: ['unix:/home/manideep/documents/fastapi/fastapi_app.sock']
+  backlog: 2048
+  workers: 3
+  worker_class: uvicorn.workers.UvicornWorker
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/manideep/documents/fastapi
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /home/manideep/documents/fastapi/access_log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/manideep/documents/fastapi/error_log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: app:main
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7ff420241550>
+  on_reload: <function OnReload.on_reload at 0x7ff420241670>
+  when_ready: <function WhenReady.when_ready at 0x7ff420241790>
+  pre_fork: <function Prefork.pre_fork at 0x7ff4202418b0>
+  post_fork: <function Postfork.post_fork at 0x7ff4202419d0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7ff420241af0>
+  worker_int: <function WorkerInt.worker_int at 0x7ff420241c10>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7ff420241d30>
+  pre_exec: <function PreExec.pre_exec at 0x7ff420241e50>
+  pre_request: <function PreRequest.pre_request at 0x7ff420241f70>
+  post_request: <function PostRequest.post_request at 0x7ff420256040>
+  child_exit: <function ChildExit.child_exit at 0x7ff420256160>
+  worker_exit: <function WorkerExit.worker_exit at 0x7ff420256280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7ff4202563a0>
+  on_exit: <function OnExit.on_exit at 0x7ff4202564c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-11-21 13:44:16 +0000] [65619] [INFO] Starting gunicorn 20.1.0
+[2022-11-21 13:44:16 +0000] [65619] [DEBUG] Arbiter booted
+[2022-11-21 13:44:16 +0000] [65619] [INFO] Listening at: unix:/home/manideep/documents/fastapi/fastapi_app.sock (65619)
+[2022-11-21 13:44:16 +0000] [65619] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2022-11-21 13:44:16 +0000] [65635] [INFO] Booting worker with pid: 65635
+[2022-11-21 13:44:16 +0000] [65636] [INFO] Booting worker with pid: 65636
+[2022-11-21 13:44:16 +0000] [65635] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/manideep/python-environments/gen1/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/home/manideep/python-environments/gen1/lib/python3.8/site-packages/uvicorn/workers.py", line 66, in init_process
+    super(UvicornWorker, self).init_process()
+  File "/home/manideep/python-environments/gen1/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/manideep/python-environments/gen1/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/manideep/python-environments/gen1/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/manideep/python-environments/gen1/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/manideep/python-environments/gen1/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/manideep/python-environments/gen1/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'app'
+[2022-11-21 13:44:16 +0000] [65635] [INFO] Worker exiting (pid: 65635)
+[2022-11-21 13:44:16 +0000] [65636] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/manideep/python-environments/gen1/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/home/manideep/python-environments/gen1/lib/python3.8/site-packages/uvicorn/workers.py", line 66, in init_process
+    super(UvicornWorker, self).init_process()
+  File "/home/manideep/python-environments/gen1/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/manideep/python-environments/gen1/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/manideep/python-environments/gen1/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/manideep/python-environments/gen1/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/manideep/python-environments/gen1/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/manideep/python-environments/gen1/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'app'
+[2022-11-21 13:44:16 +0000] [65636] [INFO] Worker exiting (pid: 65636)
+[2022-11-21 13:44:16 +0000] [65619] [WARNING] Worker with pid 65636 was terminated due to signal 15
+[2022-11-21 13:44:16 +0000] [65619] [INFO] Shutting down: Master
+[2022-11-21 13:44:16 +0000] [65619] [INFO] Reason: Worker failed to boot.
+[2022-11-21 13:44:58 +0000] [65942] [DEBUG] Current configuration:
+  config: gunicorn_conf.py
+  wsgi_app: None
+  bind: ['unix:/home/manideep/documents/fastapi/fastapi_app.sock']
+  backlog: 2048
+  workers: 3
+  worker_class: uvicorn.workers.UvicornWorker
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/manideep/documents/fastapi
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /home/manideep/documents/fastapi/access_log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/manideep/documents/fastapi/error_log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: main:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fae86c85550>
+  on_reload: <function OnReload.on_reload at 0x7fae86c85670>
+  when_ready: <function WhenReady.when_ready at 0x7fae86c85790>
+  pre_fork: <function Prefork.pre_fork at 0x7fae86c858b0>
+  post_fork: <function Postfork.post_fork at 0x7fae86c859d0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fae86c85af0>
+  worker_int: <function WorkerInt.worker_int at 0x7fae86c85c10>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fae86c85d30>
+  pre_exec: <function PreExec.pre_exec at 0x7fae86c85e50>
+  pre_request: <function PreRequest.pre_request at 0x7fae86c85f70>
+  post_request: <function PostRequest.post_request at 0x7fae86c9a040>
+  child_exit: <function ChildExit.child_exit at 0x7fae86c9a160>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fae86c9a280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fae86c9a3a0>
+  on_exit: <function OnExit.on_exit at 0x7fae86c9a4c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-11-21 13:44:58 +0000] [65942] [INFO] Starting gunicorn 20.1.0
+[2022-11-21 13:44:58 +0000] [65942] [DEBUG] Arbiter booted
+[2022-11-21 13:44:58 +0000] [65942] [INFO] Listening at: unix:/home/manideep/documents/fastapi/fastapi_app.sock (65942)
+[2022-11-21 13:44:58 +0000] [65942] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2022-11-21 13:44:58 +0000] [65964] [INFO] Booting worker with pid: 65964
+[2022-11-21 13:44:58 +0000] [65965] [INFO] Booting worker with pid: 65965
+[2022-11-21 13:44:59 +0000] [65966] [INFO] Booting worker with pid: 65966
+[2022-11-21 13:44:59 +0000] [65942] [DEBUG] 3 workers
+[2022-11-21 13:44:59 +0000] [65965] [INFO] Started server process [65965]
+[2022-11-21 13:44:59 +0000] [65965] [INFO] Waiting for application startup.
+[2022-11-21 13:44:59 +0000] [65965] [INFO] Application startup complete.
+[2022-11-21 13:44:59 +0000] [65964] [INFO] Started server process [65964]
+[2022-11-21 13:44:59 +0000] [65964] [INFO] Waiting for application startup.
+[2022-11-21 13:44:59 +0000] [65964] [INFO] Application startup complete.
+[2022-11-21 13:44:59 +0000] [65966] [INFO] Started server process [65966]
+[2022-11-21 13:44:59 +0000] [65966] [INFO] Waiting for application startup.
+[2022-11-21 13:44:59 +0000] [65966] [INFO] Application startup complete.
+[2022-11-21 13:45:31 +0000] [65942] [INFO] Handling signal: term
+[2022-11-21 13:45:31 +0000] [65964] [INFO] Shutting down
+[2022-11-21 13:45:31 +0000] [65964] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2022-11-21 13:45:31 +0000] [65966] [INFO] Shutting down
+[2022-11-21 13:45:31 +0000] [65966] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2022-11-21 13:45:31 +0000] [65965] [INFO] Shutting down
+[2022-11-21 13:45:31 +0000] [65965] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2022-11-21 13:45:32 +0000] [65964] [INFO] Waiting for application shutdown.
+[2022-11-21 13:45:32 +0000] [65964] [INFO] Application shutdown complete.
+[2022-11-21 13:45:32 +0000] [65964] [INFO] Finished server process [65964]
+[2022-11-21 13:45:32 +0000] [65964] [INFO] Worker exiting (pid: 65964)
+[2022-11-21 13:45:32 +0000] [65966] [INFO] Waiting for application shutdown.
+[2022-11-21 13:45:32 +0000] [65966] [INFO] Application shutdown complete.
+[2022-11-21 13:45:32 +0000] [65966] [INFO] Finished server process [65966]
+[2022-11-21 13:45:32 +0000] [65966] [INFO] Worker exiting (pid: 65966)
+[2022-11-21 13:45:32 +0000] [65965] [INFO] Waiting for application shutdown.
+[2022-11-21 13:45:32 +0000] [65965] [INFO] Application shutdown complete.
+[2022-11-21 13:45:32 +0000] [65965] [INFO] Finished server process [65965]
+[2022-11-21 13:45:32 +0000] [65965] [INFO] Worker exiting (pid: 65965)
+[2022-11-21 13:45:32 +0000] [65942] [INFO] Shutting down: Master
+[2022-11-21 13:45:32 +0000] [66225] [DEBUG] Current configuration:
+  config: gunicorn_conf.py
+  wsgi_app: None
+  bind: ['unix:/home/manideep/documents/fastapi/fastapi_app.sock']
+  backlog: 2048
+  workers: 3
+  worker_class: uvicorn.workers.UvicornWorker
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/manideep/documents/fastapi
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /home/manideep/documents/fastapi/access_log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/manideep/documents/fastapi/error_log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: main:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f7ea6d92550>
+  on_reload: <function OnReload.on_reload at 0x7f7ea6d92670>
+  when_ready: <function WhenReady.when_ready at 0x7f7ea6d92790>
+  pre_fork: <function Prefork.pre_fork at 0x7f7ea6d928b0>
+  post_fork: <function Postfork.post_fork at 0x7f7ea6d929d0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f7ea6d92af0>
+  worker_int: <function WorkerInt.worker_int at 0x7f7ea6d92c10>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f7ea6d92d30>
+  pre_exec: <function PreExec.pre_exec at 0x7f7ea6d92e50>
+  pre_request: <function PreRequest.pre_request at 0x7f7ea6d92f70>
+  post_request: <function PostRequest.post_request at 0x7f7ea6da7040>
+  child_exit: <function ChildExit.child_exit at 0x7f7ea6da7160>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f7ea6da7280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f7ea6da73a0>
+  on_exit: <function OnExit.on_exit at 0x7f7ea6da74c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-11-21 13:45:32 +0000] [66225] [INFO] Starting gunicorn 20.1.0
+[2022-11-21 13:45:32 +0000] [66225] [DEBUG] Arbiter booted
+[2022-11-21 13:45:32 +0000] [66225] [INFO] Listening at: unix:/home/manideep/documents/fastapi/fastapi_app.sock (66225)
+[2022-11-21 13:45:32 +0000] [66225] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2022-11-21 13:45:32 +0000] [66247] [INFO] Booting worker with pid: 66247
+[2022-11-21 13:45:32 +0000] [66248] [INFO] Booting worker with pid: 66248
+[2022-11-21 13:45:32 +0000] [66247] [INFO] Started server process [66247]
+[2022-11-21 13:45:32 +0000] [66247] [INFO] Waiting for application startup.
+[2022-11-21 13:45:32 +0000] [66247] [INFO] Application startup complete.
+[2022-11-21 13:45:32 +0000] [66249] [INFO] Booting worker with pid: 66249
+[2022-11-21 13:45:32 +0000] [66225] [DEBUG] 3 workers
+[2022-11-21 13:45:32 +0000] [66248] [INFO] Started server process [66248]
+[2022-11-21 13:45:32 +0000] [66248] [INFO] Waiting for application startup.
+[2022-11-21 13:45:32 +0000] [66248] [INFO] Application startup complete.
+[2022-11-21 13:45:32 +0000] [66249] [INFO] Started server process [66249]
+[2022-11-21 13:45:32 +0000] [66249] [INFO] Waiting for application startup.
+[2022-11-21 13:45:32 +0000] [66249] [INFO] Application startup complete.
+[2022-11-21 15:23:00 +0000] [66225] [INFO] Handling signal: term
+[2022-11-21 15:23:00 +0000] [66249] [INFO] Shutting down
+[2022-11-21 15:23:00 +0000] [66249] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2022-11-21 15:23:00 +0000] [66248] [INFO] Shutting down
+[2022-11-21 15:23:00 +0000] [66248] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2022-11-21 15:23:00 +0000] [66247] [INFO] Shutting down
+[2022-11-21 15:23:00 +0000] [66247] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2022-11-21 15:23:00 +0000] [66249] [INFO] Waiting for application shutdown.
+[2022-11-21 15:23:00 +0000] [66249] [INFO] Application shutdown complete.
+[2022-11-21 15:23:00 +0000] [66249] [INFO] Finished server process [66249]
+[2022-11-21 15:23:00 +0000] [66249] [INFO] Worker exiting (pid: 66249)
+[2022-11-21 15:23:00 +0000] [66248] [INFO] Waiting for application shutdown.
+[2022-11-21 15:23:00 +0000] [66248] [INFO] Application shutdown complete.
+[2022-11-21 15:23:00 +0000] [66248] [INFO] Finished server process [66248]
+[2022-11-21 15:23:00 +0000] [66248] [INFO] Worker exiting (pid: 66248)
+[2022-11-21 15:23:00 +0000] [66247] [INFO] Waiting for application shutdown.
+[2022-11-21 15:23:00 +0000] [66247] [INFO] Application shutdown complete.
+[2022-11-21 15:23:00 +0000] [66247] [INFO] Finished server process [66247]
+[2022-11-21 15:23:00 +0000] [66247] [INFO] Worker exiting (pid: 66247)
+[2022-11-21 15:23:01 +0000] [66225] [INFO] Shutting down: Master
+[2022-11-22 07:18:03 +0000] [577] [DEBUG] Current configuration:
+  config: gunicorn_conf.py
+  wsgi_app: None
+  bind: ['unix:/home/manideep/documents/fastapi/fastapi_app.sock']
+  backlog: 2048
+  workers: 3
+  worker_class: uvicorn.workers.UvicornWorker
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/manideep/documents/fastapi
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /home/manideep/documents/fastapi/access_log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/manideep/documents/fastapi/error_log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: main:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f771a89d550>
+  on_reload: <function OnReload.on_reload at 0x7f771a89d670>
+  when_ready: <function WhenReady.when_ready at 0x7f771a89d790>
+  pre_fork: <function Prefork.pre_fork at 0x7f771a89d8b0>
+  post_fork: <function Postfork.post_fork at 0x7f771a89d9d0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f771a89daf0>
+  worker_int: <function WorkerInt.worker_int at 0x7f771a89dc10>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f771a89dd30>
+  pre_exec: <function PreExec.pre_exec at 0x7f771a89de50>
+  pre_request: <function PreRequest.pre_request at 0x7f771a89df70>
+  post_request: <function PostRequest.post_request at 0x7f771a8b2040>
+  child_exit: <function ChildExit.child_exit at 0x7f771a8b2160>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f771a8b2280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f771a8b23a0>
+  on_exit: <function OnExit.on_exit at 0x7f771a8b24c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-11-22 07:18:03 +0000] [577] [INFO] Starting gunicorn 20.1.0
+[2022-11-22 07:18:03 +0000] [577] [DEBUG] Arbiter booted
+[2022-11-22 07:18:03 +0000] [577] [INFO] Listening at: unix:/home/manideep/documents/fastapi/fastapi_app.sock (577)
+[2022-11-22 07:18:03 +0000] [577] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2022-11-22 07:18:03 +0000] [733] [INFO] Booting worker with pid: 733
+[2022-11-22 07:18:03 +0000] [734] [INFO] Booting worker with pid: 734
+[2022-11-22 07:18:03 +0000] [735] [INFO] Booting worker with pid: 735
+[2022-11-22 07:18:03 +0000] [577] [DEBUG] 3 workers
+[2022-11-22 07:18:03 +0000] [733] [INFO] Started server process [733]
+[2022-11-22 07:18:03 +0000] [735] [INFO] Started server process [735]
+[2022-11-22 07:18:03 +0000] [733] [INFO] Waiting for application startup.
+[2022-11-22 07:18:03 +0000] [735] [INFO] Waiting for application startup.
+[2022-11-22 07:18:03 +0000] [733] [INFO] Application startup complete.
+[2022-11-22 07:18:03 +0000] [735] [INFO] Application startup complete.
+[2022-11-22 07:18:03 +0000] [734] [INFO] Started server process [734]
+[2022-11-22 07:18:03 +0000] [734] [INFO] Waiting for application startup.
+[2022-11-22 07:18:03 +0000] [734] [INFO] Application startup complete.
+[2022-11-22 11:13:39 +0000] [577] [INFO] Handling signal: term
+[2022-11-22 11:13:39 +0000] [734] [INFO] Shutting down
+[2022-11-22 11:13:39 +0000] [734] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2022-11-22 11:13:39 +0000] [735] [INFO] Shutting down
+[2022-11-22 11:13:39 +0000] [735] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2022-11-22 11:13:39 +0000] [733] [INFO] Shutting down
+[2022-11-22 11:13:39 +0000] [733] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2022-11-22 11:13:39 +0000] [734] [INFO] Waiting for application shutdown.
+[2022-11-22 11:13:39 +0000] [734] [INFO] Application shutdown complete.
+[2022-11-22 11:13:39 +0000] [734] [INFO] Finished server process [734]
+[2022-11-22 11:13:39 +0000] [734] [INFO] Worker exiting (pid: 734)
+[2022-11-22 11:13:39 +0000] [735] [INFO] Waiting for application shutdown.
+[2022-11-22 11:13:39 +0000] [735] [INFO] Application shutdown complete.
+[2022-11-22 11:13:39 +0000] [735] [INFO] Finished server process [735]
+[2022-11-22 11:13:39 +0000] [735] [INFO] Worker exiting (pid: 735)
+[2022-11-22 11:13:39 +0000] [733] [INFO] Waiting for application shutdown.
+[2022-11-22 11:13:39 +0000] [733] [INFO] Application shutdown complete.
+[2022-11-22 11:13:39 +0000] [733] [INFO] Finished server process [733]
+[2022-11-22 11:13:39 +0000] [733] [INFO] Worker exiting (pid: 733)
+[2022-11-22 11:13:40 +0000] [577] [INFO] Shutting down: Master
+[2022-11-24 15:04:45 +0000] [579] [DEBUG] Current configuration:
+  config: gunicorn_conf.py
+  wsgi_app: None
+  bind: ['unix:/home/manideep/documents/fastapi/fastapi_app.sock']
+  backlog: 2048
+  workers: 3
+  worker_class: uvicorn.workers.UvicornWorker
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/manideep/documents/fastapi
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /home/manideep/documents/fastapi/access_log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/manideep/documents/fastapi/error_log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: main:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7feee6198550>
+  on_reload: <function OnReload.on_reload at 0x7feee6198670>
+  when_ready: <function WhenReady.when_ready at 0x7feee6198790>
+  pre_fork: <function Prefork.pre_fork at 0x7feee61988b0>
+  post_fork: <function Postfork.post_fork at 0x7feee61989d0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7feee6198af0>
+  worker_int: <function WorkerInt.worker_int at 0x7feee6198c10>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7feee6198d30>
+  pre_exec: <function PreExec.pre_exec at 0x7feee6198e50>
+  pre_request: <function PreRequest.pre_request at 0x7feee6198f70>
+  post_request: <function PostRequest.post_request at 0x7feee61ad040>
+  child_exit: <function ChildExit.child_exit at 0x7feee61ad160>
+  worker_exit: <function WorkerExit.worker_exit at 0x7feee61ad280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7feee61ad3a0>
+  on_exit: <function OnExit.on_exit at 0x7feee61ad4c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-11-24 15:04:45 +0000] [579] [INFO] Starting gunicorn 20.1.0
+[2022-11-24 15:04:45 +0000] [579] [DEBUG] Arbiter booted
+[2022-11-24 15:04:45 +0000] [579] [INFO] Listening at: unix:/home/manideep/documents/fastapi/fastapi_app.sock (579)
+[2022-11-24 15:04:45 +0000] [579] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2022-11-24 15:04:45 +0000] [738] [INFO] Booting worker with pid: 738
+[2022-11-24 15:04:45 +0000] [739] [INFO] Booting worker with pid: 739
+[2022-11-24 15:04:45 +0000] [740] [INFO] Booting worker with pid: 740
+[2022-11-24 15:04:45 +0000] [579] [DEBUG] 3 workers
+[2022-11-24 15:04:45 +0000] [740] [INFO] Started server process [740]
+[2022-11-24 15:04:45 +0000] [740] [INFO] Waiting for application startup.
+[2022-11-24 15:04:45 +0000] [740] [INFO] Application startup complete.
+[2022-11-24 15:04:45 +0000] [738] [INFO] Started server process [738]
+[2022-11-24 15:04:45 +0000] [738] [INFO] Waiting for application startup.
+[2022-11-24 15:04:45 +0000] [738] [INFO] Application startup complete.
+[2022-11-24 15:04:45 +0000] [739] [INFO] Started server process [739]
+[2022-11-24 15:04:45 +0000] [739] [INFO] Waiting for application startup.
+[2022-11-24 15:04:45 +0000] [739] [INFO] Application startup complete.
+[2022-11-24 15:38:44 +0000] [579] [INFO] Handling signal: term
+[2022-11-24 15:38:44 +0000] [738] [INFO] Shutting down
+[2022-11-24 15:38:44 +0000] [740] [INFO] Shutting down
+[2022-11-24 15:38:44 +0000] [738] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2022-11-24 15:38:44 +0000] [740] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2022-11-24 15:38:44 +0000] [739] [INFO] Shutting down
+[2022-11-24 15:38:44 +0000] [739] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2022-11-24 15:38:44 +0000] [738] [INFO] Waiting for application shutdown.
+[2022-11-24 15:38:44 +0000] [738] [INFO] Application shutdown complete.
+[2022-11-24 15:38:44 +0000] [740] [INFO] Waiting for application shutdown.
+[2022-11-24 15:38:44 +0000] [738] [INFO] Finished server process [738]
+[2022-11-24 15:38:44 +0000] [740] [INFO] Application shutdown complete.
+[2022-11-24 15:38:44 +0000] [740] [INFO] Finished server process [740]
+[2022-11-24 15:38:44 +0000] [738] [INFO] Worker exiting (pid: 738)
+[2022-11-24 15:38:44 +0000] [740] [INFO] Worker exiting (pid: 740)
+[2022-11-24 15:38:44 +0000] [739] [INFO] Waiting for application shutdown.
+[2022-11-24 15:38:44 +0000] [739] [INFO] Application shutdown complete.
+[2022-11-24 15:38:44 +0000] [739] [INFO] Finished server process [739]
+[2022-11-24 15:38:44 +0000] [739] [INFO] Worker exiting (pid: 739)
+[2022-11-24 15:38:44 +0000] [579] [INFO] Shutting down: Master
+[2022-11-24 15:38:44 +0000] [2520] [DEBUG] Current configuration:
+  config: gunicorn_conf.py
+  wsgi_app: None
+  bind: ['unix:/home/manideep/documents/fastapi/fastapi_app.sock']
+  backlog: 2048
+  workers: 3
+  worker_class: uvicorn.workers.UvicornWorker
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/manideep/documents/fastapi
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /home/manideep/documents/fastapi/access_log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/manideep/documents/fastapi/error_log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: main:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f35b12c6550>
+  on_reload: <function OnReload.on_reload at 0x7f35b12c6670>
+  when_ready: <function WhenReady.when_ready at 0x7f35b12c6790>
+  pre_fork: <function Prefork.pre_fork at 0x7f35b12c68b0>
+  post_fork: <function Postfork.post_fork at 0x7f35b12c69d0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f35b12c6af0>
+  worker_int: <function WorkerInt.worker_int at 0x7f35b12c6c10>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f35b12c6d30>
+  pre_exec: <function PreExec.pre_exec at 0x7f35b12c6e50>
+  pre_request: <function PreRequest.pre_request at 0x7f35b12c6f70>
+  post_request: <function PostRequest.post_request at 0x7f35b12dc040>
+  child_exit: <function ChildExit.child_exit at 0x7f35b12dc160>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f35b12dc280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f35b12dc3a0>
+  on_exit: <function OnExit.on_exit at 0x7f35b12dc4c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-11-24 15:38:44 +0000] [2520] [INFO] Starting gunicorn 20.1.0
+[2022-11-24 15:38:44 +0000] [2520] [DEBUG] Arbiter booted
+[2022-11-24 15:38:44 +0000] [2520] [INFO] Listening at: unix:/home/manideep/documents/fastapi/fastapi_app.sock (2520)
+[2022-11-24 15:38:44 +0000] [2520] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2022-11-24 15:38:44 +0000] [2538] [INFO] Booting worker with pid: 2538
+[2022-11-24 15:38:44 +0000] [2539] [INFO] Booting worker with pid: 2539
+[2022-11-24 15:38:45 +0000] [2540] [INFO] Booting worker with pid: 2540
+[2022-11-24 15:38:45 +0000] [2520] [DEBUG] 3 workers
+[2022-11-24 15:38:45 +0000] [2538] [INFO] Started server process [2538]
+[2022-11-24 15:38:45 +0000] [2538] [INFO] Waiting for application startup.
+[2022-11-24 15:38:45 +0000] [2538] [INFO] Application startup complete.
+[2022-11-24 15:38:45 +0000] [2539] [INFO] Started server process [2539]
+[2022-11-24 15:38:45 +0000] [2539] [INFO] Waiting for application startup.
+[2022-11-24 15:38:45 +0000] [2539] [INFO] Application startup complete.
+[2022-11-24 15:38:45 +0000] [2540] [INFO] Started server process [2540]
+[2022-11-24 15:38:45 +0000] [2540] [INFO] Waiting for application startup.
+[2022-11-24 15:38:45 +0000] [2540] [INFO] Application startup complete.
+[2022-11-24 15:38:58 +0000] [2520] [INFO] Handling signal: term
+[2022-11-24 15:38:58 +0000] [2538] [INFO] Shutting down
+[2022-11-24 15:38:58 +0000] [2538] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2022-11-24 15:38:58 +0000] [2540] [INFO] Shutting down
+[2022-11-24 15:38:58 +0000] [2540] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2022-11-24 15:38:58 +0000] [2539] [INFO] Shutting down
+[2022-11-24 15:38:58 +0000] [2539] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2022-11-24 15:38:58 +0000] [2538] [INFO] Waiting for application shutdown.
+[2022-11-24 15:38:58 +0000] [2538] [INFO] Application shutdown complete.
+[2022-11-24 15:38:58 +0000] [2538] [INFO] Finished server process [2538]
+[2022-11-24 15:38:58 +0000] [2538] [INFO] Worker exiting (pid: 2538)
+[2022-11-24 15:38:58 +0000] [2540] [INFO] Waiting for application shutdown.
+[2022-11-24 15:38:58 +0000] [2540] [INFO] Application shutdown complete.
+[2022-11-24 15:38:58 +0000] [2540] [INFO] Finished server process [2540]
+[2022-11-24 15:38:58 +0000] [2540] [INFO] Worker exiting (pid: 2540)
+[2022-11-24 15:38:58 +0000] [2539] [INFO] Waiting for application shutdown.
+[2022-11-24 15:38:58 +0000] [2539] [INFO] Application shutdown complete.
+[2022-11-24 15:38:58 +0000] [2539] [INFO] Finished server process [2539]
+[2022-11-24 15:38:58 +0000] [2539] [INFO] Worker exiting (pid: 2539)
+[2022-11-24 15:38:59 +0000] [2520] [INFO] Shutting down: Master
+[2022-11-24 15:38:59 +0000] [2647] [DEBUG] Current configuration:
+  config: gunicorn_conf.py
+  wsgi_app: None
+  bind: ['unix:/home/manideep/documents/fastapi/fastapi_app.sock']
+  backlog: 2048
+  workers: 3
+  worker_class: uvicorn.workers.UvicornWorker
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/manideep/documents/fastapi
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /home/manideep/documents/fastapi/access_log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/manideep/documents/fastapi/error_log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: main:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f23148e2550>
+  on_reload: <function OnReload.on_reload at 0x7f23148e2670>
+  when_ready: <function WhenReady.when_ready at 0x7f23148e2790>
+  pre_fork: <function Prefork.pre_fork at 0x7f23148e28b0>
+  post_fork: <function Postfork.post_fork at 0x7f23148e29d0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f23148e2af0>
+  worker_int: <function WorkerInt.worker_int at 0x7f23148e2c10>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f23148e2d30>
+  pre_exec: <function PreExec.pre_exec at 0x7f23148e2e50>
+  pre_request: <function PreRequest.pre_request at 0x7f23148e2f70>
+  post_request: <function PostRequest.post_request at 0x7f23148f7040>
+  child_exit: <function ChildExit.child_exit at 0x7f23148f7160>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f23148f7280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f23148f73a0>
+  on_exit: <function OnExit.on_exit at 0x7f23148f74c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-11-24 15:38:59 +0000] [2647] [INFO] Starting gunicorn 20.1.0
+[2022-11-24 15:38:59 +0000] [2647] [DEBUG] Arbiter booted
+[2022-11-24 15:38:59 +0000] [2647] [INFO] Listening at: unix:/home/manideep/documents/fastapi/fastapi_app.sock (2647)
+[2022-11-24 15:38:59 +0000] [2647] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2022-11-24 15:38:59 +0000] [2659] [INFO] Booting worker with pid: 2659
+[2022-11-24 15:38:59 +0000] [2660] [INFO] Booting worker with pid: 2660
+[2022-11-24 15:38:59 +0000] [2661] [INFO] Booting worker with pid: 2661
+[2022-11-24 15:38:59 +0000] [2659] [INFO] Started server process [2659]
+[2022-11-24 15:38:59 +0000] [2659] [INFO] Waiting for application startup.
+[2022-11-24 15:38:59 +0000] [2647] [DEBUG] 3 workers
+[2022-11-24 15:38:59 +0000] [2659] [INFO] Application startup complete.
+[2022-11-24 15:38:59 +0000] [2660] [INFO] Started server process [2660]
+[2022-11-24 15:38:59 +0000] [2660] [INFO] Waiting for application startup.
+[2022-11-24 15:38:59 +0000] [2660] [INFO] Application startup complete.
+[2022-11-24 15:38:59 +0000] [2661] [INFO] Started server process [2661]
+[2022-11-24 15:38:59 +0000] [2661] [INFO] Waiting for application startup.
+[2022-11-24 15:38:59 +0000] [2661] [INFO] Application startup complete.
