@@ -45,3 +45,6 @@
  - "GET /fastapi_app HTTP/1.0" 200
  - "GET /fastapi_app HTTP/1.0" 200
  - "GET /fastapi_app HTTP/1.0" 200
+ - "GET /fastapi_app HTTP/1.0" 200
+ - "GET /fastapi_app HTTP/1.0" 200
+ - "GET /fastapi_app HTTP/1.0" 200
