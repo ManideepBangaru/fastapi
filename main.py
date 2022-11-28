@@ -1,32 +1,22 @@
 from fastapi import FastAPI
 import uvicorn
+from pydantic import BaseModel
+
+class Item(BaseModel):
+    name : str
+    description : str | None
+    price : float
+    tax : float | None
 
 app = FastAPI()
 
-fake_items_db = [{"item_name": "Foo"}, {"item_name": "Bar"}, {"item_name": "Baz"}]
-
-@app.get("/items/{item_id}")
-async def read_item(item_id : str, q : str | None = None, short : bool = False):
-    item = {"item" : item_id}
-    if q:
-        item.update({"q" : q})
-    if not short:
-        item.update({"description" : "This is an amazing item that has a long description"})
-    return item
-
-@app.get("/users/{user_id}/items/{item_id}")
-async def read_user_item(user_id : int, item_id : str, q : str | None = None, short : bool = False):
-    item = {"item_id" : item_id, "owner_id" : user_id}
-    if q:
-        item.update({"q" : q})
-    if not short:
-        item.update({"description" : "This is an amazing item that has a long description"})
-    return item
-
-@app.get("/names/{name_id}")
-async def read_user_name(name_id : int, needy : str):
-    users = {"user_id" : name_id, "user_name" : needy}
-    return users
+@app.post("/items/")
+async def create_item(item : Item):
+    item_dict = item.dict()
+    if item.tax:
+        price_with_tax = item.price + item.tax
+        item_dict.update({"price with tax" : price_with_tax})
+    return item_dict
 
 if __name__ == "__main__":
     uvicorn.run(app)
