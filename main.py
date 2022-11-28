@@ -24,7 +24,7 @@ async def get_model(model_name : ModelName):
         return {"model_name" : model_name}
     
     if model_name.value == "lenet":
-        return "model name is len %s"%model_name
+        return {"model name" : model_name}
     
     return "model name %s"%model_name
 
