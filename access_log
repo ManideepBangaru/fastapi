@@ -73,3 +73,14 @@
  - "GET /fastapi_app/sayhello/Manideep HTTP/1.0" 200
  - "GET /fastapi_app/sayhello/Manideep HTTP/1.0" 200
  - "GET /fastapi_app/sayhello/Manideep HTTP/1.0" 200
+ - "GET /fastapi_app/models/lenet HTTP/1.0" 404
+ - "GET /fastapi_app/sayhello HTTP/1.0" 200
+ - "GET /fastapi_app/sayhello/Manideep HTTP/1.0" 200
+ - "GET /fastapi_app/sayhello/Manideep HTTP/1.0" 200
+ - "GET /fastapi_app/sayhello HTTP/1.0" 200
+ - "GET /fastapi_app/sayhello/docs HTTP/1.0" 200
+ - "GET /fastapi_app/sayhello/redoc HTTP/1.0" 200
+ - "GET /fastapi_app/docs HTTP/1.0" 404
+ - "GET /fastapi_app/redoc HTTP/1.0" 404
+ - "GET /fastapi_app/redocs HTTP/1.0" 404
+ - "GET /fastapi_app/redoc HTTP/1.0" 404
