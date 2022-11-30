@@ -1,33 +1,49 @@
-from fastapi import FastAPI
-from pydantic import BaseModel
+from fastapi import FastAPI, Query
 import uvicorn
-
-class Item(BaseModel):
-    name : str
-    description : str | None
-    price : float
-    tax : float | None
 
 app = FastAPI()
 
-# @app.post("/items/")
-# async def create_item(item : Item):
-#     item_dict = item.dict()
-#     if item.tax:
-#         price_with_tax = item.price + item.tax
-#         item_dict.update({"price with tax" : price_with_tax})
-#     return item_dict
+# @app.get("/items/")
+# async def read_items(q : str | None = Query(default=None, min_length = 3, max_length=50, regex="^fixedquery$")):
+#     results = {"items": [{"item_id": "Foo"}, {"item_id": "Bar"}]}
+#     if q:
+#         results.update({"q": q})
+#     return results
 
-# @app.put("/items/{item_id}")
-# async def create_item(item_id : int, item : Item):
-#     return {"item_id" : item_id, **item.dict()}
+# @app.get("/items/")
+# async def read_items(q: str = Query(min_length=3)):
+#     results = {"items": [{"item_id": "Foo"}, {"item_id": "Bar"}]}
+#     if q:
+#         results.update({"q": q})
+#     return results
 
-@app.put("/items/{item_id}")
-async def create_item(item_id : int, item : Item, q : str | None = None):
-    result = {"item_id" : item_id, **item.dict()}
-    if q:
-        result.update({"q" : q})
-    return result
+# @app.get("/items/")
+# async def read_items(q: str = Query(default=..., min_length=3)):
+#     results = {"items": [{"item_id": "Foo"}, {"item_id": "Bar"}]}
+#     if q:
+#         results.update({"q": q})
+#     return results
+
+# @app.get("/items/")
+# async def read_items(q: str | None = Query(default=..., min_length=3)):
+#     results = {"items": [{"item_id": "Foo"}, {"item_id": "Bar"}]}
+#     if q:
+#         results.update({"q": q})
+#     return results
+
+# ---------------------------   Query parameter list / multiple values -------------------
+
+# @app.get("/items/")
+# async def read_items(q: list[str] | None = Query(default=None)):
+#     query_items = {"q": q}
+#     return query_items
+
+# --------------- Query parameter list / multiple values with defaults -------------------
+
+@app.get("/items/")
+async def read_items(q: list[str] = Query(default=["foo", "bar"])):
+    query_items = {"q": q}
+    return query_items
 
 if __name__ == "__main__":
     uvicorn.run(app)
