@@ -73,3 +73,8 @@
  - "GET /fastapi_app/sayhello/Manideep HTTP/1.0" 200
  - "GET /fastapi_app/sayhello/Manideep HTTP/1.0" 200
  - "GET /fastapi_app/sayhello/Manideep HTTP/1.0" 200
+ - "GET /fastapi_app HTTP/1.0" 404
+ - "GET /fastapi_app/sayhello HTTP/1.0" 200
+ - "GET /fastapi_app/sayhello/Shravani HTTP/1.0" 200
+ - "GET /fastapi_app/sayhello HTTP/1.0" 200
+ - "GET /fastapi_app/sayhello/Shravani HTTP/1.0" 200
