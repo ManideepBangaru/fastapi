@@ -84,3 +84,5 @@
  - "GET /fastapi_app/redoc HTTP/1.0" 404
  - "GET /fastapi_app/redocs HTTP/1.0" 404
  - "GET /fastapi_app/redoc HTTP/1.0" 404
+ - "GET /fastapi_app/sayhello HTTP/1.0" 200
+ - "GET /fastapi_app/sayhello/redoc HTTP/1.0" 200
