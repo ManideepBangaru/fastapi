@@ -1,47 +1,32 @@
-from fastapi import FastAPI, Query
+from fastapi import FastAPI, Path, Query
 import uvicorn
 
 app = FastAPI()
 
-@app.get("/items/")
-async def read_items(q : str = Query(default=... , min_length=3)):
-    results = {"items": [{"item_id": "Foo"}, {"item_id": "Bar"}]}
+@app.get("/items/{item_id}")
+async def read_items(item_id : int = Path(title="Enter id of item to get", ge=1)):
+    results = {"item_id" : item_id}
     if q:
-        results.update({"q": q})
+        results.update({"q" : q})
     return results
 
-# @app.get("/items/")
-# async def read_items(q : str | None = Query(default = "fixedquery", min_length=3, max_length = 50)):
-#     results = {"items": [{"item_id": "Foo"}, {"item_id": "Bar"}]}
+# @app.get("/items/{item_id}")
+# async def read_items(*, item_id : int = Path(title="id of the item to get"), q : str):
+#     results = {"item_id" : item_id}
 #     if q:
-#         results.update({"q": q})
+#         results.update({"q" : q})
 #     return results
 
-# @app.get("/items/")
-# async def read_items(q : str | None = Query(default = None, min_length=3, max_length = 50, regex="[A-Z][a-z][0-5]")):
-#     results = {"items": [{"item_id": "Foo"}, {"item_id": "Bar"}]}
+# @app.get("/items/{item_id}")
+# async def read_items(q : str, item_id : int = Path(title="id of the item to get")):
+#     results = {"item_id" : item_id}
 #     if q:
-#         results.update({"q": q})
+#         results.update({"q" : q})
 #     return results
 
-
-# @app.get("/items/")
-# async def read_items(q : str | None = Query(default = None, min_length=3, max_length = 50)):
-#     results = {"items": [{"item_id": "Foo"}, {"item_id": "Bar"}]}
-#     if q:
-#         results.update({"q": q})
-#     return results
-
-# @app.get("/items/")
-# async def read_items(q : str | None = Query(default = None, max_length = 50)):
-#     results = {"items": [{"item_id": "Foo"}, {"item_id": "Bar"}]}
-#     if q:
-#         results.update({"q": q})
-#     return results
-
-# @app.get("/items/")
-# async def read_items(q:str | None=None):
-#     results = {"items" : [{"item_id": "Foo"},{"item_id" : "bar"}]}
+# @app.get("/items/{item_id}")
+# async def read_items(item_id : int = Path(title="The id of item to get"), q : str | None = Query(default=None, alias="item-query")):
+#     results = {"item_id" : item_id}
 #     if q:
 #         results.update({"q" : q})
 #     return results
