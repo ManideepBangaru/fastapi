@@ -1,72 +1,34 @@
 from fastapi import FastAPI
-from pydantic import BaseModel, HttpUrl
+from pydantic import BaseModel, EmailStr
 import uvicorn
 
 app = FastAPI()
 
-# image url
-class Image(BaseModel):
-    url : HttpUrl
-    name : str
+class UserIn(BaseModel):
+    username : str
+    password : str
+    email : EmailStr
+    full_name : str | None = None
+
+class UserOut(BaseModel):
+    username : str
+    email : EmailStr
+    full_name  : str | None = None
 
 class Item(BaseModel):
-    name : str
-    description : str | None
-    price : float
+    Name : str
+    Description : str | None = None
+    Price : float
     tax : float | None = None
-    tags : set[str] = set()
-    images : list[Image] | None = None
+    tags : list[str] = []
 
-@app.put("/items/{item_id}")
-async def read_item(item_id : int, item : Item):
-    results = {"item_id" : item_id, "item" : item}
-    return results
+@app.post("/items/", response_model=Item)
+async def create_item(item : Item):
+    return item
 
-
-# General way - image url
-# class Image(BaseModel):
-#     url : str
-#     name : str
-
-# class Item(BaseModel):
-#     name : str
-#     description : str | None
-#     price : float
-#     tax : float | None = None
-#     tags : set[str] = set()
-#     image : Image | None = None
-
-# @app.put("/items/{item_id}")
-# async def read_item(item_id : int, item : Item):
-#     result = {"item_id" : item_id, "item" : item}
-#     return result
-
-
-# Python has a specific way to declare lists with internal types or "type parameters"
-# class Item(BaseModel):
-#     name : str
-#     description : Union[str, None] = None
-#     price : float
-#     tax : float
-#     tags : List[str] = []
-
-# @app.put("/items/{item_id}")
-# async def read_item(item_id : int, item : Item):
-#     results = {"item id" : item_id, "item" : item}
-#     return results
-
-# General way
-# class Item(BaseModel):
-#     name : str
-#     description : str
-#     price : float
-#     tax : float
-#     tags : list = []
-
-# @app.put("/items/{item_id}")
-# async def update_item(item_id : int, item: Item):
-#     results = {"item_id":item_id, "item" : item}
-#     return results
+@app.post("/user/", response_model=UserOut)
+async def create_user(user : UserIn):
+    return user
 
 if __name__ == "__main__":
     uvicorn.run(app)
