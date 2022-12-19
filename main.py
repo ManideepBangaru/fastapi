@@ -1,35 +1,22 @@
-from fastapi import FastAPI, Path, Query
+from fastapi import FastAPI
+from fastapi.encoders import jsonable_encoder
+from pydantic import BaseModel
+from datetime import datetime
 import uvicorn
 
 app = FastAPI()
 
-@app.get("/items/{item_id}")
-async def read_items(*, item_id : int = Path(title="Enter id of item to get", ge=1), q : str):
-    results = {"item_id" : item_id}
-    if q:
-        results.update({"q" : q})
-    return results
+fake_db = {}
 
-# @app.get("/items/{item_id}")
-# async def read_items(*, item_id : int = Path(title="id of the item to get"), q : str):
-#     results = {"item_id" : item_id}
-#     if q:
-#         results.update({"q" : q})
-#     return results
+class Item(BaseModel):
+    title : str
+    timestamp : datetime
+    description : str | None = None
 
-# @app.get("/items/{item_id}")
-# async def read_items(q : str, item_id : int = Path(title="id of the item to get")):
-#     results = {"item_id" : item_id}
-#     if q:
-#         results.update({"q" : q})
-#     return results
-
-# @app.get("/items/{item_id}")
-# async def read_items(item_id : int = Path(title="The id of item to get"), q : str | None = Query(default=None, alias="item-query")):
-#     results = {"item_id" : item_id}
-#     if q:
-#         results.update({"q" : q})
-#     return results
+@app.put("/items/{id}")
+def update_item(id : str, item : Item):
+    json_compatible_item_data = jsonable_encoder(item)
+    fake_db[id] = json_compatible_item_data
 
 if __name__ == "__main__":
     uvicorn.run(app)
